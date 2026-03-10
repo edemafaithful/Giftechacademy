@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { BookOpen, Users, Award, Rocket } from 'lucide-react';
-import { ACADEMY_CONFIG } from '../config';
 
 const About = () => {
   return (
@@ -32,15 +31,20 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-6">
-              Empowering the next generation of tech leaders through practical, accessible education.
+              Empowering the next generation of tech leaders through practical,
+              accessible education.
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
-              GifTechAcademy was founded with a simple goal: to make high-quality tech education accessible to everyone, regardless of their background. 
-              We believe that tech skills are the most powerful tools for career transformation in the 21st century.
+              GifTechAcademy was founded with a simple goal: to make
+              high-quality tech education accessible to everyone, regardless of
+              their background. We believe that tech skills are the most
+              powerful tools for career transformation in the 21st century.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">
-              Our curriculum is designed by industry professionals who focus on what actually matters in the job market. 
-              We don't just teach theory; we help you build real projects and gain the confidence to succeed in the tech industry.
+              Our curriculum is designed by industry professionals who focus on
+              what actually matters in the job market. We don't just teach
+              theory; we help you build real projects and gain the confidence to
+              succeed in the tech industry.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
@@ -49,7 +53,9 @@ const About = () => {
                   <BookOpen size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-zinc-900 dark:text-white">Practical Learning</h4>
+                  <h4 className="font-bold text-zinc-900 dark:text-white">
+                    Practical Learning
+                  </h4>
                   <p className="text-sm text-zinc-500">Hands-on projects</p>
                 </div>
               </div>
@@ -58,7 +64,9 @@ const About = () => {
                   <Users size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-zinc-900 dark:text-white">Community</h4>
+                  <h4 className="font-bold text-zinc-900 dark:text-white">
+                    Community
+                  </h4>
                   <p className="text-sm text-zinc-500">Learn with peers</p>
                 </div>
               </div>
@@ -67,7 +75,9 @@ const About = () => {
                   <Award size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-zinc-900 dark:text-white">Certification</h4>
+                  <h4 className="font-bold text-zinc-900 dark:text-white">
+                    Certification
+                  </h4>
                   <p className="text-sm text-zinc-500">Recognized skills</p>
                 </div>
               </div>
@@ -76,7 +86,9 @@ const About = () => {
                   <Rocket size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-zinc-900 dark:text-white">Career Growth</h4>
+                  <h4 className="font-bold text-zinc-900 dark:text-white">
+                    Career Growth
+                  </h4>
                   <p className="text-sm text-zinc-500">Job-ready training</p>
                 </div>
               </div>
@@ -92,7 +104,7 @@ const About = () => {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src={ACADEMY_CONFIG.aboutImage}
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000"
                 alt="Students Learning"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
