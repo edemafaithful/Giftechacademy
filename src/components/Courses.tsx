@@ -5,14 +5,23 @@ import { CheckCircle, MessageCircle } from "lucide-react";
 
 const Courses = () => {
   return (
-    <section id="courses" className="py-24 bg-zinc-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="courses"
+      className="py-24 bg-zinc-950 relative overflow-hidden"
+    >
+      {/* Background Gradients */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-pink-500/10 blur-[120px] rounded-full"></div>
+        <div className="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] bg-blue-500/10 blur-[120px] rounded-full"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
             Our Courses
           </motion.h2>
@@ -22,7 +31,7 @@ const Courses = () => {
             viewport={{ once: true }}
             className="h-1 bg-pink-500 mx-auto rounded-full"
           ></motion.div>
-          <p className="mt-6 text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <p className="mt-6 text-zinc-400 max-w-2xl mx-auto">
             Choose from our range of high-demand tech courses. All courses are
             designed to take you from beginner to job-ready.
           </p>
@@ -38,17 +47,15 @@ const Courses = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-black rounded-xl overflow-hidden border border-zinc-800 hover:border-zinc-700 transition-all group"
             >
-              <div className="aspect-video overflow-hidden relative">
+              <div
+                className={`aspect-video overflow-hidden relative bg-zinc-900/30 flex items-center justify-center ${course.id === "ai-apps" ? "p-0" : "p-10"}`}
+              >
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${course.id === "ai-apps" ? "object-cover" : "object-contain"}`}
                   referrerPolicy="no-referrer"
                 />
-                {/* Pinterest-style Save button placeholder if needed */}
-                <div className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="w-2 h-2 bg-white rounded-full"></span> Save
-                </div>
               </div>
 
               <div className="p-6">
