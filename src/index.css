@@ -3,10 +3,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply overflow-x-hidden;
   }
   
   body {
-    @apply antialiased text-zinc-900 dark:text-zinc-100;
+    @apply antialiased text-zinc-900 dark:text-zinc-100 overflow-x-hidden;
   }
 }
 
@@ -25,5 +26,14 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-emerald-500;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
 }
 
